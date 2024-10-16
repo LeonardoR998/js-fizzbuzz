@@ -20,20 +20,25 @@
 
 // stampo i numeri da 1 a 100
 
-const numberOfRepetions = 100;
-
-for (let i = 0; i < numberOfRepetions; i++) {
-  console.log(`Ripetizione ${i + 1}: indice ${i} `);
-
-  //SE il numero è multiplo di 3 stampa Fizz
-  if (i % 3 === 0) {
+for (let i = 1; i <= 100; i++) {
+  // SE il numero modulo 15 è uguale a 0
+  if (i % 15 === 0) {
+    // -stampo "FizzBuzz"
+    console.log("FizzBuzz");
+  }
+  //ALTRIMENTI SE il numero è multiplo di 3
+  else if (i % 3 === 0) {
+    // -stampo "Fizz"
     console.log("Fizz");
-    //ALTRIMENTI SE il numero è multiplo di 5 stampa Buzz
-  } else if (i % 5 === 0) {
+  }
+  //ALTRIMENTI SE il numero è multiplo di 5
+  else if (i % 5 === 0) {
+    // -stampo "Buzz"
     console.log("Buzz");
   }
-  // SE i numeri non sono divisibili per 3 o 5 stampa FizzBuzz
-  if (!(i % 3 === 0 && i % 5 === 0)) {
-    console.log("FizzBuzz");
+  // ALTRIMENTI
+  else {
+    // -stampo N
+    console.log(i);
   }
 }
